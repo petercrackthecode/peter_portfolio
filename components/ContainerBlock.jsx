@@ -17,7 +17,7 @@ export default function ContainerBlock({ children, ...customMeta }) {
   }
 
   return (
-    <div>
+    <div className="min-w-screen min-h-screen relative">
       <Head>
         <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />
@@ -36,7 +36,7 @@ export default function ContainerBlock({ children, ...customMeta }) {
         <meta name="twitter:image" content={meta.image} />
         {meta.date && <meta property="article:published_time" content={meta.date} />}
       </Head>
-      <main className="dark:bg-gray-800 w-full">
+      <main className="w-full">
         <Navbar />
         <div>{children}</div>
         <Footer />
