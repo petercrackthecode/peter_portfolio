@@ -21,7 +21,7 @@ export default function Navbar() {
 
   return (
     <nav className="max-w-6xl mx-auto px-4 py-10 md:py-20">
-      <a href="https://github.com/petercrackthecode/peter_portfolio" className="fixed top-0 right-0">
+      <a href="https://github.com/petercrackthecode/peter_portfolio" className="absolute top-0 right-0">
         <img
           loading="lazy"
           width="149"
