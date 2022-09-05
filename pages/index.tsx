@@ -17,8 +17,6 @@ const Home: NextPage<{ repositories: [any] }> = ({ repositories }) => {
 export const getServerSideProps = async () => {
   let token = process.env.GITHUB_AUTH_TOKEN || ''
   const repositories = await getLatestRepos(token)
-  console.log('token = ', token)
-  console.log('repositories = ', repositories)
 
   return {
     props: {
