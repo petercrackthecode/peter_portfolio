@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react'
+import React from 'react'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import Navbar from './Navbar'
@@ -11,7 +11,7 @@ type Meta = {
   title: string
   description?: string
   image?: string
-  date: Date
+  date?: Date
 }
 
 type Props = {
@@ -21,7 +21,7 @@ type Props = {
 
 export default function ContainerBlock({ children, ...customMeta }: Props) {
   const router = useRouter()
-  const meta = {
+  const meta: Meta = {
     title: 'Peter Nguyen- Software Engineer, Marathon Runner, and Life Long Learner',
     description: `I'm Peter Nguyen, a software engineer based in the Bay Area, CA. I specialize in building fast & beautiful websites, applications, and everything in between.`,
     image: 'portfolio_image.jpg',
@@ -47,7 +47,7 @@ export default function ContainerBlock({ children, ...customMeta }: Props) {
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.image} />
-        {meta.date && <meta property="article:published_time" content={meta.date} />}
+        {meta.date && <meta property="article:published_time" content={meta.date.toString()} />}
       </Head>
       <main className="w-full">
         <Navbar />
