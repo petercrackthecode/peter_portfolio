@@ -3,18 +3,29 @@ import ContainerBlock from '../components/ContainerBlock'
 import FavoriteProjects from '../components/FavoriteProjects'
 import LatestCode from '../components/LatestCode'
 import Hero from '../components/Hero'
+import { getLatestRepos } from '../lib/getLatestRepos'
 
-const Home: NextPage = () => {
+const Home: NextPage<{ repositories: [any] }> = ({ repositories }) => {
   return (
-    <ContainerBlock
-      title="Peter Nguyen- Software Engineer, Runner, and Life Long Learner"
-      description="Welcome to Peter Nguyen's portfolio website"
-    >
+    <ContainerBlock>
       <Hero />
       <FavoriteProjects />
-      <LatestCode />
+      <LatestCode repositories={repositories} />
     </ContainerBlock>
   )
+}
+
+export const getServerSideProps = async () => {
+  let token = process.env.GITHUB_AUTH_TOKEN || ''
+  const repositories = await getLatestRepos(token)
+  console.log('token = ', token)
+  console.log('repositories = ', repositories)
+
+  return {
+    props: {
+      repositories,
+    },
+  }
 }
 
 export default Home

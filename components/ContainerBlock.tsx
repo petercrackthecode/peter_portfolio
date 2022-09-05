@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactElement } from 'react'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import Navbar from './Navbar'
@@ -6,7 +6,20 @@ import Footer from './Footer'
 
 const MY_WEBSITE = 'https://www.petercrackthecode.com'
 
-export default function ContainerBlock({ children, ...customMeta }) {
+type Meta = {
+  type: string
+  title: string
+  description?: string
+  image?: string
+  date: Date
+}
+
+type Props = {
+  customMeta?: Meta
+  children?: React.ReactNode
+}
+
+export default function ContainerBlock({ children, ...customMeta }: Props) {
   const router = useRouter()
   const meta = {
     title: 'Peter Nguyen- Software Engineer, Marathon Runner, and Life Long Learner',
