@@ -10,8 +10,7 @@ export default function Navbar() {
 
   const NAVBAR_LINKS = [
     { content: 'About', href: '/about' },
-    { content: 'Projects', href: '/projects' },
-    { content: 'Experience', href: '/experience' },
+    { content: 'Projects', href: '/#favorite-projects' },
     { content: 'Contact', href: '/contact' },
   ]
 
