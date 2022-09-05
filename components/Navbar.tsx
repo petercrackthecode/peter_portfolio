@@ -22,10 +22,12 @@ export default function Navbar() {
   return (
     <nav className="max-w-6xl mx-auto px-4 py-10 md:py-20">
       <div className="flex flex-row justify-between items-center">
-        <div className="flex flex-col items-start justify-start">
-          <h1 className="font-bold">Peter Nguyen</h1>
-          <p className="text-gray-500">Full-Stack Software Engineer</p>
-        </div>
+        <Link href="/" passHref={true}>
+          <a className="flex flex-col items-start justify-start">
+            <h1 className="font-bold">Peter Nguyen</h1>
+            <p className="text-gray-500">Full-Stack Software Engineer</p>
+          </a>
+        </Link>
         <div className="flex flex-row space-x-6">
           {NAVBAR_LINKS.map((navlink, key) => (
             <Link href={navlink.href} key={`${navlink.content}_${key}`} passHref={true}>

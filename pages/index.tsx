@@ -1,5 +1,4 @@
 import type { NextPage } from 'next'
-import ContainerBlock from '../components/ContainerBlock'
 import FavoriteProjects from '../components/FavoriteProjects'
 import LatestCode from '../components/LatestCode'
 import Hero from '../components/Hero'
@@ -7,11 +6,11 @@ import { getLatestRepos } from '../lib/getLatestRepos'
 
 const Home: NextPage<{ repositories: [any] }> = ({ repositories }) => {
   return (
-    <ContainerBlock>
+    <>
       <Hero />
       <FavoriteProjects />
       <LatestCode repositories={repositories} />
-    </ContainerBlock>
+    </>
   )
 }
 
