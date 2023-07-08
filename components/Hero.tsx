@@ -7,7 +7,7 @@ export default function Hero() {
     { title: 'Engineer', color: '#F59E0B' },
     { title: 'Runner', color: '#84CC16' },
     { title: 'Coffee Aficionado', color: '#10B981' },
-    { title: 'Life long learner', color: '#3B82F6' },
+    { title: 'Life-long learner', color: '#3B82F6' },
   ]
   return (
     <div className="flex flex-row justify-center items-start overflow-hidden">
