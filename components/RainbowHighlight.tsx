@@ -6,17 +6,8 @@ export const RainbowHighlight = ({ color, children }: { color: string; children:
     return null
   }
 
-  const animationDuration = Math.floor(30 * 4)
-
   return (
-    <RoughNotation
-      type="highlight"
-      multiline={true}
-      padding={[0, 2]}
-      iterations={1}
-      animationDuration={animationDuration}
-      color={color}
-    >
+    <RoughNotation type="highlight" multiline={true} padding={[0, 2]} iterations={1} color={color}>
       {children}
     </RoughNotation>
   )
