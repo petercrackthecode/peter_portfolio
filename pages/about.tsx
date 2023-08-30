@@ -38,7 +38,7 @@ export default function About() {
               <div className="text-lg text-gray-500 mt-4 dark:text-gray-300">
                 I&apos;m open for job opportunities (internship/part-time/full-time). If you&apos;re interested, check my{' '}
                 <a
-                  href={'https://www.dropbox.com/s/eajsqw71w7l06bg/Peter%20Nguyen%20resume.pdf?dl=0'}
+                  href={'https://www.dropbox.com/s/wf269jwb1yw5rde/Peter%20Nguyen%20resume.pdf?dl=0'}
                   target="__blank"
                   className="text-gray-800 border-b-2 border-gray-800 dark:border-gray-300 font-bold dark:text-gray-300"
                 >

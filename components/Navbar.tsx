@@ -48,7 +48,7 @@ export default function Navbar() {
         </div>
         <div className="space-x-4 flex flex-row items-center">
           <a
-            href="https://www.dropbox.com/s/eajsqw71w7l06bg/Peter%20Nguyen%20resume.pdf?dl=0"
+            href="https://www.dropbox.com/s/wf269jwb1yw5rde/Peter%20Nguyen%20resume.pdf?dl=0"
             title="resume"
             target="_blank"
             rel="noopener noreferrer"
